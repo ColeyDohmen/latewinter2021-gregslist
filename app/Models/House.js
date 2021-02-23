@@ -1,14 +1,14 @@
 import {generateId} from "../Utils/GenerateId.js"
 
 export default class House{
-constructor({bedrooms, bathrooms, levels, imgUrl, year, price}){
+constructor({bedrooms, bathrooms, levels, imgUrl, year, price, _id, id}){
   this.bedrooms = bedrooms
   this.bathrooms = bathrooms
   this.levels = levels
   this.imgUrl = imgUrl
   this.year = year
   this.price = price
-  this.id = generateId()
+  this.id = _id || id
 }
 
 get Template(){
@@ -20,7 +20,7 @@ get Template(){
       <p class="card-text">Year: ${this.year}</p>
       <p>Levels : ${this.levels}</p>
       <p>Price: ${this.price}</p>
-      <button class="btn btn-success" onclick="app.houseController.bid('${this.id}')">Bid</button>
+      <button class="btn btn-info" onclick="app.houseController.bid('${this.id}')">Bid</button>
   </div>
 </div>`
 }
