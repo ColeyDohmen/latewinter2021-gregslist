@@ -22,7 +22,7 @@ class HouseService{
   bid(id) {
     let temp = ProxyState.houses
     let house = temp.find(h=> h.id === id)
-    house.price += 100
+    house.price += 1000
     ProxyState.houses = temp
   }
 
