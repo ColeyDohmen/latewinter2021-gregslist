@@ -19,19 +19,17 @@ class JobService{
        console.error(error)
    }
   }
-//   async createHouse(rawHouse) {
-
-//     try {
-//       await api.post('houses',rawHouse)
-//       this.getHouses()
-//     }
-//     catch (error){
-//       console.error(error)
-//     }
+  async createJob(rawJob) {
+    try{
+        const res = await api.post('jobs',rawJob)
+        this.getJobs()
+    }   catch(error){
+        console.error(error)
+    }
 
   
 
-//   }
+  }
 
 //   async bid(id) {
 //     let house = ProxyState.houses.find(h=> h.id === id)

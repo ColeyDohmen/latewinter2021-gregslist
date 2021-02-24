@@ -23,24 +23,24 @@ export default class JobController{
     let form = event.target
     console.log(form)
     let rawJob = {
-        title: form.title.value,
+        jobTitle: form.jobTitle.value,
       hours: form.hours.value,
-      price: parseFloat(form.price.value),
-      imgUrl: form.imgUrl.value,
-      levels: form.levels.value
+      company:form.company.value,
+      rate: form.rate.value,
+      description: form.description.value
     }
     console.log(rawJob)
     jobService.createJob(rawJob)
   }
 
-  bid(id){
-    console.log('bidding ' + id)
-    jobService.bid(id)
-  }
+//   bid(id){
+//     console.log('bidding ' + id)
+//     jobService.bid(id)
+//   }
 
-  deleteHouse(id){
-    console.log(id)
-    jobService.deleteHouse(id)
-  }
+//   deleteJob(id){
+//     console.log(id)
+//     jobService.deleteJob(id)
+//   }
 
 }
